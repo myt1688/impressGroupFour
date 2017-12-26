@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>9.30</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">网络营销案例3  日常生活中的网络营销</h1>
+
+<h2 id="toc_1">韩都衣舍</h2>
+
+<p>韩都衣舍品牌创立于2008年，韩都衣舍是国内知名的互联网快时尚品牌。2010年，韩都衣舍这家网店一跃成为淘宝网服饰类综合人气排名第一、会员多达200万、长江以北最大的淘宝卖家、山东电子商务的领头羊。 
+<img src="images/9.30_1.png" alt=""></p>
+
+<p>韩都衣舍（HSTYLE），由山东韩都衣舍电子商务有限公司全资经营。韩都衣舍品牌创立于2008年，专注于互联网时尚品牌运营。2009年4月，经过了一年的探索和人员培养，韩都衣舍转型为互联网自有品牌，并开始了“基于产品小组制为核心的单品全程运营体系”这一独特商业模式的探索。2010年获得了“全国10大网货品牌” “全球最佳实践网商” “全球网商30强”等荣誉称号。2011年入住京东、凡客诚品、当当等各大电子商务平台，确立了“互联网韩风快时尚”第一品牌管理的行业地位，并获得了国际知名风投IDG以及韩国KIP投资。
+目前，韩都衣舍基于互联网的多品牌运营已经有七十个品牌：韩风快时尚女装HSTYLE、韩风OL时尚女装、韩风快时尚男装AMH、韩风快时尚童装MiniZaru、欧美风快时尚女装niBBuns、东方复古设计师品牌素缕Souline等等。</p>
+
+<h2 id="toc_2">卫龙辣条</h2>
+
+<p>近年来经济形势的动荡，食品行业可谓是冰火两重天，各种产品的销量不断剧减，利润下滑。尤其是三鹿奶粉、地沟油等事件之后，人们对于饮食健康的注重，对于食品的品质要求也开始越来越高，零食也渐渐变成了垃圾食品的代名词。
+但是如今小食品界却出现了一个奇葩，就像是开了挂一样，销量不降反升，而且从“垃圾产品”的光荣代表迅速蹿成了“食品界第一网红”，这么反常的现象不得不让人其他同行们惊掉了大牙。
+<img src="images/9.30_2.png" alt=""></p>
+
+<p>卫龙辣条在论坛上脑洞大开的段子，微博上让人捧腹的表情包，以及敢于模仿、创意无限的电商网站，这些创意营销形成一种热门的话题和大信息时代的人们追求新奇独特的关注点。
+并且平时网络上关注这些信息的群体也正好是他们的主要消费者，投放信息的定位十分的精准和明确，在不断增加品牌曝光度的同时引导潜在的消费者关注他们的产品，最终转化成了实际的销量。   </p>
+
+<h2 id="toc_3">Airbnb</h2>
+
+<p>Airbnb是AirBed and Breakfast (&quot;Air-b-n-b&quot;)的缩写，中文名：爱彼迎。爱彼迎是一家联系旅游人士和家有空房出租的房主的服务型网站，它可以为用户提供多样的住宿信息。2011年，Airbnb服务令人难以置信地增长了800%。
+Airbnb成立于2008年8月，总部设在美国加州旧金山市。Airbnb是一个旅行房屋租赁社区，用户可通过网络或手机应用程序发布、搜索度假房屋租赁信息并完成在线预定程序。据官网显示以及媒体报道，其社区平台在191个国家、65,000个城市为旅行者们提供数以百万计的独特入住选择，不管是公寓、别墅、城堡还是树屋。Airbnb被时代周刊称为“住房中的EBay”。
+<img src="images/9.30_3.png" alt=""></p>
+
+<p>2016年11月01日，国外媒体报道美国短租服务公司Airbnb对中国用户表示，该公司将在本地存储他们的个人数据。
+1月27日，总部位于旧金山的短期租赁网站Airbnb首次盈利，公司营业额增长超过80%。
+Airbnb 则是非传统旅行产品，要求用户有钱有闲，还需要独立的策划能力。</p>
+
+<h2 id="toc_4">Uber</h2>
+
+<p>Uber（Uber Technologies,Inc.）中文译作“优步”，是一家美国硅谷的科技公司。Uber在2009年，由加利福尼亚大学洛杉矶分校辍学生特拉维斯·卡兰尼克和好友加雷特·坎普创立。因旗下同名打车APP而名声大噪。Uber目前已经进入中国大陆的60余座城市，并在全球范围内覆盖了70多个国家的400余座城市。Uber 是建立在追求更好的通勤体验，而放弃廉价的公共交通这样的消费理念之下。</p>
+
+<p><img src="images/9.30_4.png" alt=""></p>
+
+<p><br>
+1.请根据以上四个案例的内容<br>
+（1）找出案例所对应的营销理论并写出理由。（400字左右）<br>
+（2）选择其中之一分析该品牌的网络营销系统的特点和所存在的问题。（400字左右）<br>
+（3）分析所选择的案例的网络营销站点的类型。（100字左右）</p>
+
+<p><br></p>
+
+<hr>
+
+<p><br></p>
+
+<h1 id="toc_5">网络营销案例3</h1>
+
+<h3 id="toc_6">1.找出案例所对应的营销理论并写出理由。（400字左右）</h3>
+
+<p>答：
+（1） 韩都衣舍：韩都衣舍使用的是直复营销理论。首先直复营销理论中的“直”是指不通过中间分销渠道而直接通过媒体连接企业和消费者。 “复”是指企业和用户之间有良好的即时和良好的交互及沟通，企业对用户的购买意愿信息可以进行统计。而根据案例介绍，韩都衣舍是长江以北最大的淘宝卖家，则可以知道其使用了直复营销理论。
+（2） 卫龙辣条：卫龙是典型的使用软营销理论，卫龙是消费者主动去买，从消费者的体验和需求出发，采用拉式策略吸引消费者关注企业，来达到营销效果。点进网店首页就是一张写着“传统的、民族的、亲民的、外国人做不了的”辣条图，显然这句引起不少人的情怀心理。
+（3） Airbnb：Airbnb是运用整合营销理论，以服务为主，必须以顾客为中心，为顾客提供适时、适地、适情的服务，最大程度上满足顾客需求。Airbnb 公司说，他们不直接提供客房，也不提供客房服务，他们提供最核心的东西——家的感觉。Airbnb上面出租的房间可谓千姿百态：市区的公寓、城郊的别墅、海边的度假屋、山上的城堡、密林里的树屋等，任君选择。
+（4） Uber：Uber是用关系营销理论，旨在保持顾客，为顾客提供高度满意的产品和服务价值，通过提供有效的顾客服务，保持与顾客的长期关系，实现企业的营销目标。Uber是不设预约的，Uber的理念是，在任何你需要的时候，5分钟内都可以叫到一辆车。那么不设预约怎么做到5分钟叫到一辆车，就是通过密切联系司机与乘客，提高效率。</p>
+
+<h3 id="toc_7">2.选择其中之一分析该品牌的网络营销系统的特点和所存在的问题。（400字左右）</h3>
+
+<p>卫龙拥有自己的食品旗舰店网站，在网站上可以看到卫龙所销售的所有食品，价格以及相关的信息，网站的主页有关于卫龙新品的推荐、会员制度等内容，会员制只有在其食品旗舰店网站上才可以找到这个入口。在食品页面，可以进行相关信息的搜索，有根据关键字搜索和根据价格内容搜索，也有对商品的显示进行排序，可以根据综合排序、销量排序、新品排序、收藏排序等等。但是卫龙的网络营销系统有一个很大的问题，就是在点击单个的商品时，会跳转到淘宝天猫旗舰店的商品的信息页面，所能提供的信息也只能在天猫旗舰店网站上所显示的信息，同时也意味着卫龙的食品旗舰店网站是没有自己独立的电子商务购买平台的。如果淘宝站点遇到什么问题时，卫龙的所有商品也就无法购买。同时在食品旗舰店网站上所提供的联系方式和客服也是通过天猫上的阿里旺旺所建立的，没有拥有并搭建属于自己的联系平台，有着不稳定不安全的特点。</p>
+
+<h3 id="toc_8">3.分析所选择的案例的网络营销站点的类型。（100字左右）</h3>
+
+<p>卫龙的食品旗舰店站点只能属于信息型站点。因为这个站点实际上是没有搭建电子商务平台的，他是通过跳转淘宝天猫旗舰店的方式实现下单购买等一系列的操作；同时站点也没有信息订阅和售后服务的功能。但这个站点建立起了公众对其产品的服务和注意，因此属于信息型站点。</p>
+
+
+
+
+</body>
+
+</html>

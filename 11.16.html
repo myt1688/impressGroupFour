@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>11.16</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">案例分析九——淘宝双十一促销</h1>
+
+<p>10月24日，一名为“智障班班长”的微博用户吐槽阿里双十一促销规则复杂，引发网民广泛关注，收获1.5万转发，超过3万个赞。
+该用户是这样吐槽阿里的双十一促销的：“淘宝明年双十一能不能别搞幺蛾子了，我就是一个普通人，我很傻的，数学不好又不识字，你写规则再多我也看不懂，求你明年就红色宋体五号加粗下划线告诉我这东西多少钱，便宜！能买！送赠品！不买你就呆！那我就买了，对你百分之百信任，求求你也体谅体谅我，让大家和和气气过一个愉快的单身节。 ”
+<img src="images/11.16_1.png" alt=""></p>
+
+<p>该用户的遭遇引发网友大量共鸣，五千多条评论都在吐槽阿里的双十一促销。
+网民的意见主要集中在以下几点：
+一、先涨价再打折 阿里双十一优惠感受不到
+很多网民反馈，阿里的双十一优惠，有虚假促销之嫌，很多都是先涨价再打折，最后算下来并不比平时优惠。
+以下是网民的一些评论：
+活着与猫：写这么多意思不比平时便宜还不懂吗。</p>
+
+<p>酸掉牙的柠檬汁儿：提价之后再打折也很棒棒[跪了]
+我只是天生偏执狂：实实在在去年双十一前我看中了卓诗尼的一双靴子，标价是178，我就加入购物车看双十一会不会便宜一点。然后在11月10号晚上等说过了12点看看，然后点进我的购物车，那双靴子变成了578，我惊讶了，过了12点，天啊，那双靴子变成了198。嗯，我就把它从我购物车清除了，然后关了手机睡觉了。
+水瓶曈曈：嗯，上次看见一件衣服90，隔天搞聚划算120，问客服咋回事，他说以现在价格为准。
+二、玩文字游戏 定金难退消费者很受伤
+今年阿里双十一促销，定金难退一事也遭到网民吐槽。</p>
+
+<p>大脸王373747：搞那么多花头干啥 还预售 就我这种心情不定的人 前一秒下单下一秒就能把单退了的人（卖家未发货） 预售付完定金，退完又不给退定金。我不如去实体店买 。去实体店买我还不用等到11.11才能买到呢。图个便宜 还搞这么复杂，哼！
+晟利达：定金提前给平台，知道那么多人有多大一笔钱吗？到双11，他们都用这笔钱投资赚多少了，他们根本不亏！
+黑色的苹果：还什么定金膨胀3倍！结果是10抵30哈哈哈哈哈哈，只便宜20块不说，退商品定金还不退～～～
+Fate<em>lane</em>person：其实有很多定金不退，所以就意味着你出了定金的人到时候如果手慢抢不上，那么商家收定金的钱也会捞一笔[微笑]
+三、规则复杂 消费者表示购个物心真累
+阿里今年双十一促销，规则异常复杂，很多消费者表示，数学不好的人，购起物来根本不知道最后购买的商品价格是多少。</p>
+
+<p>数学老师陈ming秋子：直接写，比平时优惠多少！我就买！
+某某小陌：对啊，明码标价多好，现在到底是想指望谁能看得懂那么多规则啊，买东西还要费脑子神经病啊
+撸羊毛小能手：啊哈哈哈哈！！老子来消费的还是来考试的！！
+小野免：都不知道这些优惠怎么想的，满多少减多少，优惠券又是满多少能用，前多少名付款减多少打几折，选购制定搭配套餐又有优惠，我踏马只想要一个明明白白的优惠结果[微笑]
+p<em>佐佐伊人</em>q：前几天想在双十一买个电视，跟客服聊了半天，做了半天数学题，我还是没懂，你直接告诉我这个电视我总共要花多少钱买不就行了，就一直在那里跟我绕，最后气的我不买了[怒骂][怒骂]没法上截图给你们看，气的我都快吐血了[允悲][允悲]
+仙女辛Super辛：这都是套路 套路越复杂 它挣钱越多
+风雅铃儿：对。都是套路，随便改个价格然后就说便宜多少，还有各种规则，真心烦，直接明标价多少就好了
+sugar<em>snow：我看的都是原价写的比平时还贵 然后再优惠10块 其实比原价还贵两块[拜拜] 真当我数学那么烂吗[允悲]
+社交媒体时代，永远不要把消费者当傻子，欺骗消费者，苦果只能自己吞下。
+有不少消费者表示将抵制今年阿里的双十一。
+Rita</em>杨Yang：没错！所以今年双十一我就！哪暖和哪呆着啦！[喵喵] 看都看不懂懒得看就哼！
+簌-流：像618那样跨店通用优惠券不好吗？今年双十一太水，不参加了。
+胖胖要瘦出锁骨：去年开始就已经失去兴趣了，旗舰店也是百般无赖，等了一个月之后不发货了，让退款。从一开始好好的活动，变得越来越虚假，越来越差。还弄什么双十一晚会，不如真真正正让利消费者。对比国外每年几次货真价实的打折促销活动，真心觉得淘宝寒碜的很！！！
+希望阿里巴巴能听到来自消费者的声音，用真诚的态度对待消费者，才能收获消费者的尊重。</p>
+
+<h3 id="toc_1">作业：</h3>
+
+<p>花小呗准备在双十一当天买Kindle Paperwhite款,原价¥1189，现有如下活动：</p>
+
+<ol>
+<li>店铺活动：单品优惠券，满1000-160，有效期2017.11.12-2017.11.30；</li>
+<li>购买Kindle入门版享29元优惠券，购买Kindle Paperwhite款享19元优惠券，购买Kindle旗舰版享49元优惠券；</li>
+<li>收藏店铺可获得10元优惠券（不可与其他优惠券同享）；</li>
+<li>产品预售：2017.11.01-2017.11.11期间付定金100元可于双十一当天抵扣300元；</li>
+<li>购买Kindle入门版享29元优惠券，购买Kindle Paperwhite款享19元优惠券，购买Kindle旗舰版享49元优惠券；</li>
+<li>双十一当天购物津贴每满400减50；</li>
+</ol>
+
+<p><strong>问选择最优方案时应付尾款金额为多少？（请写出计算过程)</strong></p>
+
+<p><br></p>
+
+<hr>
+
+<p><br></p>
+
+<h1 id="toc_2">解答：</h1>
+
+<p><strong>抵扣1:定金100抵300；即抵扣200<br>
+抵扣2:每满400减50购物津贴 ；即抵扣100<br>
+抵扣3:paperwhite享19元优惠劵 ；即抵扣19<br>
+总抵扣=200+100+160+19=319<br>
+因此实付款=1189-319=870<br>
+实付尾款=870-100（定金）=770</strong></p>
+
+
+
+
+</body>
+
+</html>
